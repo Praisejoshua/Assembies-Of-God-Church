@@ -1,0 +1,31 @@
+Order of Program
+
+-How to think like a programmer
+-Variables
+-Data types
+-Operators
+-Conditionals
+-Loops
+-Functions
+-Arrays
+-Objects
+
+-css variables
+-css animation
+-creating html element with javascript
+-controlling css with javascript
+-creating css with javascript
+
+{
+    -JSON
+    -Error handling
+    -APIs
+    -Async programming
+    -Promises
+    -Fetch API
+    -Local storage
+    -Session storage
+    -WebSockets
+    -Event handling
+    -DOM manipulation
+}

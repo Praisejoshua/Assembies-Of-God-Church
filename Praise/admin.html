@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Post Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .admin-container {
+      background: #fff;
+      padding: 20px;
+      margin-top: 40px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      width: 500px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    input[type="file"] {
+      margin-bottom: 15px;
+    }
+
+    .preview {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .preview img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background: #4CAF50;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="admin-container">
+    <h2>Create New Post</h2>
+    <form id="postForm">
+      <label for="topic">Topic of the Day</label>
+      <input type="text" id="topic" placeholder="Enter topic...">
+
+      <label for="images">Upload Images</label>
+      <input type="file" id="images" multiple accept="image/*">
+      <div class="preview" id="preview"></div>
+
+      <button type="submit">Post</button>
+    </form>
+  </div>
+
+  <script>
+    const imageInput = document.getElementById("images");
+    const preview = document.getElementById("preview");
+
+    imageInput.addEventListener("change", () => {
+      preview.innerHTML = ""; // Clear old previews
+      const files = imageInput.files;
+
+      for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+          const img = document.createElement("img");
+          img.src = e.target.result;
+          preview.appendChild(img);
+        };
+
+        reader.readAsDataURL(file);
+      }
+    });
+
+    document.getElementById("postForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const topic = document.getElementById("topic").value;
+      alert("Post created with topic: " + topic + " (images will be uploaded when backend is ready)");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>
+         {% block title %}
+         Assemblies of God Church
+         {% endblock %}
+      </title>
+      <!-- External Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+      <!-- Your static CSS -->
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <!-- Page-specific CSS (child templates can inject here) -->
+      {% block extra_head %}{% endblock %}
+   </head>
+   <body>
+      <!-- Header -->
+      <header class="ray">
+         <div class="logo">
+            <img src="{% static 'images/assemblies of god church.webp' %}" style="height: 5rem;" alt="Assemblies of God Church Logo">
+         </div>
+         <div>
+            <nav id="myn">
+               <a href="{% url 'index' %}#about" class="navItem">About Us</a>
+               <a href="{% url 'index' %}#ministries" class="navItem">Ministries</a>
+               <a href="{% url 'index' %}#events" class="navItem">Events</a>
+               <a href="{% url 'index' %}#sermons" class="navItem">Sermons</a>
+               <a href="{% url 'index' %}#pastors-section" class="navItem">Pastors</a>
+               <a href="{% url 'index' %}#donate" class="navItem">Give / Donate</a>
+               <a href="{% url 'index' %}#contact" class="navItem">Contact</a>
+            </nav>
+         </div>
+         <div class="btn">
+            <a href="{% url 'gallery' %}" style="text-decoration: none;" class="btn-2">Gallery</a>
+            <div class="ham">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+      </header>
+      <!-- Page content -->
+      {% block content %}{% endblock %}
+      <!-- Footer -->
+      <footer class="footer text-center py-4">
+         <p>&copy; 2025 Assemblies Of God Church. All Rights Reserved.</p>
+         <div>
+            <a href="https://web.facebook.com/agnwc" target="_blank"><i class="fab fa-facebook fa-lg"></i></a>
+            <a href="https://x.com/agnwc" target="_blank"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="https://www.instagram.com/agnwc" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="https://www.youtube.com/@agnwc" target="_blank"><i class="fab fa-youtube fa-lg"></i></a>
+         </div>
+      </footer>
+      <!-- Your static JS -->
+      <script src="{% static 'js/script.js' %}"></script>
+      <!-- Page-specific JS (child templates can inject here) -->
+      {% block extra_js %}{% endblock %}
+   </body>
+</html>

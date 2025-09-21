@@ -1,0 +1,289 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+Assemblies of God Church | Home
+{% endblock %}
+{% block content %}
+<!-- Hero Section -->
+<section class="div-outest">
+   <div class="m-div-4">
+      <div class="div-1">
+         <div class="div-1-1">Welcome</div>
+         <div class="div-1-2">To Assemblies Of God Church</div>
+      </div>
+      <div class="div-2">
+         <div class="div-2-top">
+            <div class="div-2-1">Faith</div>
+            <div class="div-2-2">Hope</div>
+            <div class="div-2-3">Love</div>
+         </div>
+         <div class="div-2-bottom">
+            <div class="div-2-4">in</div>
+            <div class="div-2-5">Christ</div>
+         </div>
+      </div>
+      <div class="div-3">
+         A place to worship, grow, and serve together.
+      </div>
+      <div class="div-4">
+         <div class="div-4-1">Join Us This Sunday</div>
+         <a href="https://www.youtube.com/@agnwc" style="text-decoration: none;" class="div-4-2">Watch Live</a>
+      </div>
+   </div>
+   <!-- Hero Image -->
+   <div class="hero-image">
+      <img src="{% static '/images/assemblies of god church.webp' %}" alt="Assemblies of God Church">
+   </div>
+</section>
+<!-- About Section -->
+<section id="about" class="container py-5 text-center">
+   <h2>About Us</h2>
+   <p class="lead">
+      The World Assemblies of God Fellowship is a global Pentecostal denomination made up of independent yet united member churches sharing the same beliefs and history.
+      <br><br>
+      The General Council of the Assemblies of God, Nigeria, as part of this fellowship, is dedicated to spreading the gospel in Nigeria and beyond through the power of the Holy Spirit. It seeks to foster worship, strengthen fellowship among believers, and support educational efforts for the church’s growth and effectiveness.
+   </p>
+</section>
+<!-- Ministries -->
+<section id="ministries" class="container py-5">
+   <h2 class="text-center mb-4">Our Ministries</h2>
+   <div class="row g-4 text-center">
+      <div class="col-md-4">
+         <i class="bi bi-emoji-smile fa-3x"></i>
+         <h5>Youth</h5>
+         <p>Empowering the next generation in Christ.</p>
+      </div>
+      <div class="col-md-4">
+         <i class="bi bi-music-note fa-3x"></i>
+         <h5>Choir</h5>
+         <p>Leading worship through songs of praise.</p>
+      </div>
+      <div class="col-md-4">
+         <i class="bi bi-hand-heart fa-3x"></i>
+         <h5>Outreach</h5>
+         <p>Serving the community with love.</p>
+      </div>
+   </div>
+</section>
+<!-- Events -->
+<section id="events" class="container py-5">
+   <h2 class="text-center mb-4">Upcoming Events</h2>
+   <div class="row g-4 text-center">
+      <div class="col-md-4">
+         <i class="bi bi-calendar-event fa-3x"></i>
+         <h5>Sunday Service</h5>
+         <p>Join us weekly at 8am & 12pm.</p>
+      </div>
+      <div class="col-md-4">
+         <i class="bi bi-journal-text fa-3x"></i>
+         <h5>Bible Study</h5>
+         <p>Dive deep into God’s Word every Tuesday.</p>
+      </div>
+      <div class="col-md-4">
+         <i class="bi bi-stars fa-3x"></i>
+         <h5>Special Events</h5>
+         <p>Celebrating Christ through seasonal gatherings.</p>
+      </div>
+   </div>
+</section>
+<!-- Sermons -->
+<section id="sermons" class="container py-5 text-center">
+   <h2>Latest Sermons</h2>
+   <p>Catch up on recent messages and be encouraged in your walk with God.</p>
+   <button class="btn btn-primary">Watch Sermons</button>
+</section>
+<!-- Pastors -->
+<section id="pastors-section">
+   <h2 class="text-center mb-4">Meet Our Pastors</h2>
+   <div class="pastors-flex">
+      <div class="pastor-card">
+         <img src="{% static 'images/test_image.jpeg' %}" alt="Pastor 1">
+         <h5>Pastor 1</h5>
+         <p>Senior Pastor</p>
+      </div>
+      <div class="pastor-card">
+         <img src="{% static 'images/test_image.jpeg' %}" alt="Pastor 2">
+         <h5>Pastor 2</h5>
+         <p>Assistant Pastor</p>
+      </div>
+      <div class="pastor-card">
+         <img src="{% static 'images/test_image.jpeg' %}" alt="Pastor 3">
+         <h5>Pastor 3</h5>
+         <p>Children Pastor</p>
+      </div>
+   </div>
+</section>
+<!-- Weekly Activities -->
+<section class="container py-5">
+   <h2 class="text-center mb-4">Our Weekly Activities</h2>
+   <div class="activities-grid">
+      <div class="testimonial text-center">
+         <p><strong>Monday</strong> – Departmental Meeting (5pm)</p>
+      </div>
+      <div class="testimonial text-center">
+         <p><strong>Tuesday</strong> – Bible Study (5pm)</p>
+      </div>
+      <div class="testimonial text-center">
+         <p><strong>Wednesday</strong> – Solution Hour (5pm)</p>
+      </div>
+      <div class="testimonial text-center">
+         <p><strong>Thursday</strong> – Choir Practice (Soul Feeders) (5pm)</p>
+      </div>
+      <div class="testimonial text-center">
+         <p><strong>Friday</strong> – Preparatory Class (5pm)</p>
+      </div>
+      <div class="testimonial text-center">
+         <p><strong>Saturday</strong> – Band/Choir (EOG) Practice (2pm)</p>
+      </div>
+      <div class="testimonial text-center">
+         <p><strong>Sunday</strong> – Sunday School (8am)</p>
+      </div>
+      <div class="testimonial text-center">
+         <p><strong>Sunday</strong> – Sunday Service (9am)</p>
+      </div>
+   </div>
+</section>
+<style>
+   .activities-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 1.5rem;
+   }
+</style>
+<!-- Donate -->
+<section id="donate" class="cta-section text-center">
+   <h2>Support Our Mission</h2>
+   <p>Your giving helps us reach more lives with the message of Christ.</p>
+   <button type="button" class="btn btn-light">Give Online</button>
+   <!-- Modal -->
+   <div id="bankModal" class="modal">
+      <div class="modal-content">
+         <span class="close">&times;</span>
+         <h3>Bank Details for Giving</h3>
+         <p><strong>Bank Name:</strong> First Bank of Nigeria</p>
+         <p><strong>Account Name:</strong> Assemblies Of God Church</p>
+         <p><strong>Account Number:</strong> 1234567890</p>
+         <p><strong>Branch:</strong> Abuja Main Branch</p>
+      </div>
+   </div>
+   <!-- CSS -->
+   <style>
+      .btn-give {
+      padding: 10px 20px;
+      background-color: #f8f9fa;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+      }
+      .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+      }
+      .modal-content {
+      background-color: #111;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      color: #fff;
+      text-align: center;
+      }
+      .modal-content h3 {
+      margin-bottom: 15px;
+      }
+      .modal-content p {
+      margin: 8px 0;
+      }
+      .close {
+      color: #aaa;
+      float: right;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      }
+      .close:hover {
+      color: #fff;
+      }
+   </style>
+   <!-- JavaScript -->
+   <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const modal = document.getElementById("bankModal");
+        const btn = document.querySelector(".btn.btn-light");
+        const span = document.querySelector(".close");
+      
+        // Open modal
+        btn.addEventListener("click", () => {
+          modal.style.display = "block";
+        });
+      
+        // Close modal when clicking X
+        span.addEventListener("click", () => {
+          modal.style.display = "none";
+        });
+      
+        // Close modal when clicking outside the modal content
+        window.addEventListener("click", (event) => {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        });
+      });
+   </script>
+</section>
+<!-- Contact Section -->
+<section class="contact-section" id="contact">
+   <h2 class="text-center mb-4">Contact Us</h2>
+   <div class="contact-flex">
+      <!-- Map -->
+      <div class="map-container">
+         <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3068.3733366641914!2d7.524728873700517!3d9.004006491056321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0f747a4e1ff7%3A0x6d3757ac794ccaec!2sAssemblies%20of%20God%20Church!5e1!3m2!1sen!2sng!4v1756406778996!5m2!1sen!2sng" 
+            width="100%" 
+            height="400" 
+            style="border:0; border-radius: 10px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+         </iframe>
+      </div>
+      <div class="contact-container">
+<form class="contact-form" action="https://formspree.io/f/xandaoyo" method="POST">
+   <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter Your Name..." required>
+   </div>
+
+   <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter Your Email..." required>
+   </div>
+
+   <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Enter Your Message/Prayer Points.." required></textarea>
+   </div>
+
+   <!-- Optional hidden input -->
+   <input type="hidden" name="_subject" value="New Contact Form Submission">
+
+   <button type="submit" class="btn-submit">Send Message</button>
+</form>
+
+      </div>
+   </div>
+</section>
+<!-- Floating background glow -->
+<div class="ball-1"></div>
+<div class="ball-1"></div>
+<div class="ball-1"></div>
+{% endblock %}
