@@ -1,0 +1,952 @@
+:root {
+    --persain-green: rgb(0, 166, 147);
+    --star-dust: #9f9f9f;
+    --white: #ffffff;
+    --text: #272727;
+    --banana-mint: #F7E26B;
+}
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #d0d0d0;
+    background-color: #000000;
+}
+
+.ray {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00000086;
+    backdrop-filter: blur(7px);
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+}
+
+.logo {
+    color: var(--white) ;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.brand-name {
+    font-size: 14px;
+}
+nav a {
+    color: var(--star-dust);
+    text-decoration: none;
+    margin: 6px 10px;
+    transition: all 0.4s ease;
+    font-size: 15px;
+    padding-bottom: 15px;
+}/*
+nav a:hover{
+    color: var(--white);
+}*/
+
+nav a:hover {
+  color: #fff;
+  border-bottom: 2px solid var(--banana-mint);
+}
+
+
+.ham {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    width: 15px;
+    height: 18px;
+    transform: translateY(-10px) translateX(10px);
+    cursor: pointer;
+}
+.ham span {
+    width: 20px;
+    height: 1px;
+    background-color: white;
+    transition: all 1s ease;
+}
+.ham.active span:nth-child(1) {
+    transform: translateY(0px) translateX(0px) rotate(180deg);
+    height: 10px;
+}
+.ham.active span:nth-child(2) {
+    width: 5px;
+    height: 10px
+}
+.ham.active span:nth-child(3) {
+    width: 5px;
+    height: 10px
+}
+@media screen and (max-width: 868px) {
+    nav {
+        display: none;
+    }
+    nav.active {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 80px;
+    left: 20px;
+}
+    .blur-all {
+    filter: blur(500px);
+    transition: filter 1s ease;
+    }
+
+    .no-blur {
+    filter: none blur(0px)!important;
+    }
+    .ham {
+        display: flex;
+    }
+}
+.dropdown {
+  position: fixed;
+  top: 50px;
+  left: 22%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  padding: 1rem;
+  padding-right: 0rem;
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  width: 235px;
+  border-radius: 8px;
+  background-color: rgba(15, 15, 15, 0.849);
+  z-index: 9500;
+  backdrop-filter: blur(7px);
+  overflow: hidden;
+}
+
+.dropdown2{left: 28%} .dropdown3{left: 35%} .dropdown4{left: 42%} .dropdown5{left: 49%} .dropdown6{left: 54%} .dropdown7{left: 60%}
+
+
+.dropdown .dpicons {
+  background-color: #363636;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dropdown span {
+  margin-left: 8px;
+  font-size: 14px;
+  display: inline-block;
+  transform: translateY(10px)
+}
+.dropdown blockquote{
+  font-size: 13px;
+  margin-left: 8px;
+  color: rgb(126, 126, 126);
+}
+.dropdown a {
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.dropdown a:hover .dpicons{
+  color: #2e2e2e;
+  background-color: #ffffff;
+  transition: 0.3s;
+}
+.dropdown a:hover blockquote{
+  color: #ffffff;
+  transition: 0.3s;
+}
+.dropdown.show {
+  display: flex;
+  animation: fadeIn 0.4s ease forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+    min-width: 130px;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    min-width: 150px;
+  }
+}
+.btn {
+    display: flex;
+    align-items: baseline;
+    justify-content: baseline;
+    transform: translateX(-35px);
+}
+.btn-1 {
+    font-weight: 500;
+    background-color: transparent;
+    padding: 10px 10px;
+    border: none;
+    color: var(--star-dust);
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out; /* anything written here is not part of the code but for the programer to remember stuff*/
+}
+.btn-1:active { /* active is what happen when you tap the button*/
+    background-color: var(--white);
+    color: var(--star-dust);
+}
+.btn-1:hover { /* hover is what happens when your mouse is over the button*/
+    color: white;
+}
+.btn-2 {
+    font-weight: 500;
+    background-color: var(--white);
+    padding: 5px 10px;
+    border: none;
+    color: black;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+}
+.btn-2:active{
+    background-color: var(--white);
+    color: var(--star-dust);
+}
+.btn-2:hover {
+    background-color: #ffffff8f;
+}
+
+/* Hero */
+.div-outest {
+    display: flex;
+    justify-content: center;
+    align-items: last baseline;
+    width: 100%;
+    height: 520px;
+    margin-bottom: 20px;
+}
+
+.hero-image img {
+  max-width: 420px;
+  border-radius: 12px;
+  opacity: 0;
+  animation: fadeInUp 2s ease forwards;
+  animation-delay: 2.6s; /* after your text finishes */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+/* .div-outest {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url("./images/church-bg.jpg") center/cover no-repeat;
+} */
+
+.m-div-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+.div-1 {
+    background: linear-gradient(45deg, rgba(20, 184, 255, 0.409), rgba(0, 0, 0, 0));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 215px;
+    border-radius: 50px;
+    padding: 5px;
+    gap: 10px;
+    animation: first 1.5s ease-in-out forwards;
+}
+
+.div-1-1 {
+    background-color: rgb(2, 146, 224);
+    border-radius: 50px;
+    font-size: 10px;
+    padding: 3px 8px;
+    font-weight: 600;
+    
+}
+.div-1-2 {
+    font-size: 12px;
+    font-weight: 600;
+    padding-right: 5px;
+}
+
+.div-2{
+    font-size: 74px;
+    font-weight: 700;
+    color: #ffffff;
+}
+.div-2-top {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+}
+.div-2-1 {
+    opacity: 0;
+    animation: first 1.5s ease-in-out forwards;
+    animation-delay: 1.5s; /*gu*/
+}
+.div-2-2 {
+    opacity: 0;
+    animation: first 1.5s ease-in-out forwards;
+    animation-delay: 1.7s;
+}
+
+.div-2-3 {
+    opacity: 0;
+    animation: first 1.5s ease-in-out forwards;
+    animation-delay: 1.8s;
+}
+
+.div-2-4 {
+    opacity: 0;
+    animation: first 1.5s ease-in-out forwards;
+    animation-delay: 2s;
+}
+ 
+.div-2-5 {
+    opacity: 0;
+    animation: first 1.5s ease-in-out forwards;
+    animation-delay: 2.2s;
+}
+.div-3 {
+    opacity: 0;
+    animation: first 1.5s ease-in-out forwards;
+    animation-delay: 2.3s;
+}
+.div-2-bottom {
+    display: flex;
+    gap: 10px;
+}
+.div-3{
+    font-size: 23px;
+    color: #bababa;
+}
+.div-4{
+    display: flex;
+    width: 270px;
+    justify-content: space-between;
+    font-size: 16px;
+}
+.div-4-1 {
+    background-color: rgb(244, 244, 244);
+    border-radius: 50px;
+    padding: 10px 10px;
+    color: #454545;
+    font-weight: 600;
+    transition: all 0.9s ease;
+    opacity: 0;
+    animation: first 1.5s ease-in-out forwards;
+    animation-delay: 2.4s; 
+    cursor: pointer;
+}
+.div-4-1:hover {
+    background-color: rgba(244, 244, 244, 0.776);
+    
+}
+.div-4-2 {
+    background-color: rgb(41, 41, 41);
+    border-radius: 50px;
+    padding: 10px 12px;
+    color: #dfdfdf;
+    font-weight: 600;
+    transition: all 0.9s ease;
+    opacity: 0;
+    animation: first 1.5s ease-in-out forwards;
+    animation-delay: 2.5s;
+    cursor: pointer;
+}
+.div-4-2:hover {
+    background-color: rgba(41, 41, 41, 0.731);
+    color: #dfdfdf9d;
+}
+
+.carpet {
+    width: 90%;
+    height: 699px;
+    border-radius: 15px;
+    outline: 2px solid rgba(108, 108, 108, 0.3);
+    position: relative;
+    left: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    opacity: 0;
+    animation: carpet 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* ---------- Section Defaults ---------- */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+section p {
+  font-size: 16px;
+  color: #cfcfcf;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+}
+
+/* ---------- About ---------- */
+#about {
+  background: #111111;
+  border-radius: 12px;
+  padding: 60px 20px;
+}
+
+/* ---------- Ministries / Events Grid ---------- */
+#ministries .row,
+#events .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+}
+#ministries .col-md-4,
+#events .col-md-4 {
+  flex: 1 1 250px;
+  background: #1c1c1c;
+  border-radius: 12px;
+  padding: 25px;
+  transition: transform 0.3s ease;
+}
+#ministries .col-md-4:hover,
+#events .col-md-4:hover {
+  transform: translateY(-8px);
+  background: #242424;
+}
+#ministries i,
+#events i {
+  color: var(--banana-mint);
+  margin-bottom: 15px;
+}
+#ministries h5,
+#events h5 {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+#ministries p,
+#events p {
+  font-size: 15px;
+  color: #bbbbbb;
+}
+
+/* ---------- Sermons ---------- */
+#sermons {
+  background: #151515;
+  border-radius: 12px;
+}
+#sermons button {
+  margin-top: 20px;
+  background: var(--persain-green);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#sermons button:hover {
+  background: #019482;
+}
+
+/* ---------- Community ---------- */
+#community {
+  background: #111111;
+  border-radius: 12px;
+}
+
+/* ---------- Pastors ---------- */
+.pastors-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.pastors-flex {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap; /* so they stack on small screens */
+}
+
+.pastor-card {
+  flex: 1;
+  max-width: 280px;
+}
+
+.pastor-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pastor-card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+
+/* ---------- Testimonials ---------- */
+.testimonial {
+  background: #1c1c1c;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+.testimonial:hover {
+  transform: scale(1.05);
+  background: #242424;
+}
+
+.testimonial small {
+  display: block;
+  margin-top: 10px;
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* ---------- Donate ---------- */
+#donate {
+  background: linear-gradient(135deg, #00a693, #00685e);
+  color: #fff;
+  padding: 70px 20px;
+  border-radius: 12px;
+}
+#donate button {
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#donate button:hover {
+  background: #e5e5e5;
+}
+
+/* ---------- Contact Section ---------- */
+.contact-section {
+  padding: 50px 20px;
+}
+
+.contact-flex {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap; /* stack on small screens */
+}
+
+.map-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-form {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column; /* label above input */
+  margin-bottom: 20px;   /* space between fields */
+}
+
+.contact-form label {
+  margin-bottom: 6px; /* spacing between label and input */
+  font-weight: 600;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px; /* consistent padding */
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #1c1c1c;
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box; /* prevents overflow */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #e0cb53;
+  outline: none;
+}
+
+.btn-submit {
+  background: var(--banana-mint, #e0cb53);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: #cbb742;
+}
+
+
+/* ---------- Footer ---------- */
+.footer {
+  background: #0e0e0e;
+  color: #888;
+}
+.footer a {
+  margin: 0 10px;
+  color: #888;
+  transition: color 0.3s;
+}
+.footer a:hover {
+  color: var(--banana-mint);
+}
+.footer i {
+  margin: 0 8px;
+  padding: 10px;
+  border-radius: 50%;
+  background: #1c1c1c;
+  transition: all 0.3s ease;
+}
+.footer i:hover {
+  background: var(--banana-mint);
+  color: #000;
+}
+
+
+
+.glow {
+    width: 1400px;
+    height: 20px;
+    background: linear-gradient(0deg, rgba(90, 90, 90, 0.87), rgb(241, 241, 241), rgb(78, 78, 78));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    filter: blur(50px);
+    animation: glow 2s ease-in-out infinite;
+    border-radius: 50%;
+}
+@Keyframes glow {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    } 100% {
+        transform: translateX(120%) translateY(120%) rotate(45deg);
+    } 
+}
+@keyframes first {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    } to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes carpet {
+    from {
+        transform: translateY(40px) translateX(-50%);
+        opacity: 0;
+    } to {
+        transform: translateY(20px) translateX(-50%);
+        opacity: 1;
+    }
+}
+
+.ball-1 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 70%;
+    z-index: -1;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgb(0, 52, 77), rgb(71, 71, 71), transparent);
+    animation: shine 10s ease-in-out forwards;
+    filter: blur(100px);
+}
+@keyframes shine {
+    0% {
+        opacity: 0;
+        width: 200px;
+        height: 200px;
+        transform: translate(100px, 100px);
+    } 50% {
+        opacity: 1;
+        width: 700px;
+        height: 700px;
+        transform: translate(0%, 0%);
+    } 100% {
+        width: 200px;
+        height: 200px;
+        transform: translate(100px, 100px);
+    }
+}
+
+:root {
+    --persain-green: rgb(0, 166, 147);
+    --star-dust: #9f9f9f;
+    --white: #ffffff;
+    --text: #272727;
+    --banana-mint: #F7E26B;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #d0d0d0;
+    background-color: #000000;
+}
+
+/* ---------- NAVBAR ---------- */
+.ray {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00000086;
+    backdrop-filter: blur(7px);
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+}
+
+.logo {
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-name {
+    font-size: 14px;
+}
+
+nav a {
+    color: var(--star-dust);
+    text-decoration: none;
+    margin: 6px 10px;
+    transition: all 0.4s ease;
+    font-size: 15px;
+    padding-bottom: 15px;
+}
+
+nav a:hover {
+    color: #fff;
+    border-bottom: 2px solid var(--banana-mint);
+}
+
+/* ---------- HAMBURGER ---------- */
+.ham {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    width: 15px;
+    height: 18px;
+    transform: translateY(-10px) translateX(10px);
+    cursor: pointer;
+}
+.ham span {
+    width: 20px;
+    height: 1px;
+    background-color: white;
+    transition: all 1s ease;
+}
+.ham.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.ham.active span:nth-child(2) { opacity: 0; }
+.ham.active span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+
+/* ---------- DROPDOWN MENUS ---------- */
+.dropdown {
+    position: fixed;
+    top: 50px;
+    left: 22%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 1rem;
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    width: 235px;
+    border-radius: 8px;
+    background-color: rgba(15, 15, 15, 0.849);
+    z-index: 9500;
+    backdrop-filter: blur(7px);
+}
+
+.dropdown .dpicons {
+    background-color: #363636;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown span { margin-left: 8px; font-size: 14px; }
+.dropdown blockquote { font-size: 13px; margin-left: 8px; color: rgb(126, 126, 126); }
+.dropdown a { color: #ffffff; text-decoration: none; display: flex; align-items: center; }
+
+.dropdown.show { display: flex; animation: fadeIn 0.4s ease forwards; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- HERO SECTION ---------- */
+.div-outest {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    height: 520px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 20px;
+    padding-top: 100px;
+}
+
+.m-div-4 { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+
+.div-1 {
+    background: linear-gradient(45deg, rgba(20, 184, 255, 0.409), rgba(0, 0, 0, 0));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 215px;
+    border-radius: 50px;
+    padding: 5px;
+    gap: 10px;
+}
+
+.div-2 { font-size: 74px; font-weight: 700; color: #fff; line-height: 1.1; }
+.div-3 { font-size: 23px; color: #bababa; }
+.div-4 { display: flex; width: 270px; justify-content: space-between; font-size: 16px; gap: 15px; flex-wrap: wrap; }
+
+.hero-image img {
+    max-width: 420px;
+    border-radius: 12px;
+    opacity: 0;
+    animation: fadeInUp 2s ease forwards;
+    animation-delay: 2.6s;
+}
+
+/* ---------- SECTIONS ---------- */
+section { padding: 80px 20px; text-align: center; }
+section h2 { font-size: 32px; margin-bottom: 20px; color: #fff; }
+section p { font-size: 16px; color: #cfcfcf; max-width: 800px; margin: 0 auto 20px; line-height: 1.6; }
+
+/* ---------- FLEX LAYOUTS ---------- */
+.pastors-flex,
+.contact-flex {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.pastor-card { flex: 1; max-width: 280px; text-align: center; }
+.pastor-card img {
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* ---------- RESPONSIVE FIXES ---------- */
+@media (max-width: 992px) {
+    .div-2 { font-size: 50px; }
+    .div-3 { font-size: 20px; }
+    .div-4 { width: 100%; justify-content: center; }
+    .hero-image img { max-width: 80%; }
+}
+
+@media (max-width: 768px) {
+    nav { display: none; }
+    nav.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: rgba(0,0,0,0.9);
+        padding: 20px;
+    }
+    .ham { display: flex; }
+    .div-outest { flex-direction: column; height: auto; }
+    .div-2 { font-size: 40px; }
+    .div-3 { font-size: 18px; }
+    section { padding: 50px 15px; }
+}
+
+@media (max-width: 500px) {
+    .div-2 { font-size: 32px; }
+    .div-3 { font-size: 16px; }
+    .div-4 { flex-direction: column; gap: 10px; }
+    section h2 { font-size: 24px; }
+    section p { font-size: 14px; }
+    .pastor-card img { width: 150px; height: 150px; }
+}
+
